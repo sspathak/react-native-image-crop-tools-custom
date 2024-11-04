@@ -1,6 +1,6 @@
 {
-  "name": "react-native-image-crop-tools",
-  "title": "React Native Image Crop Tools",
+  "name": "react-native-image-crop-tools-custom",
+  "title": "React Native Image Crop Tools Custom",
   "version": "1.8.0",
   "description": "Native image crop tools with embeddable UI and on the fly aspect ratio switchin",
   "scripts": {
