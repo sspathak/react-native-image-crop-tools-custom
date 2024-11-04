@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		20E26B48272226EF001DE3D2 /* libreact-native-image-crop-tools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libreact-native-image-crop-tools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20E26B48272226EF001DE3D2 /* libreact-native-image-crop-tools-custom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libreact-native-image-crop-tools-custom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E26B5427222734001DE3D2 /* CropViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewManager.h; sourceTree = "<group>"; };
 		20E26B5527222734001DE3D2 /* CropViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewManager.m; sourceTree = "<group>"; };
 		20E26B5627222734001DE3D2 /* RCTCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTCropView.h; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		20E26B49272226EF001DE3D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20E26B48272226EF001DE3D2 /* libreact-native-image-crop-tools.a */,
+				20E26B48272226EF001DE3D2 /* libreact-native-image-crop-tools-custom.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,9 +64,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20E26B47272226EF001DE3D2 /* react-native-image-crop-tools */ = {
+		20E26B47272226EF001DE3D2 /* react-native-image-crop-tools-custom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20E26B51272226EF001DE3D2 /* Build configuration list for PBXNativeTarget "react-native-image-crop-tools" */;
+			buildConfigurationList = 20E26B51272226EF001DE3D2 /* Build configuration list for PBXNativeTarget "react-native-image-crop-tools-custom" */;
 			buildPhases = (
 				20E26B44272226EF001DE3D2 /* Sources */,
 				20E26B45272226EF001DE3D2 /* Frameworks */,
@@ -76,9 +76,9 @@
 			);
 			dependencies = (
 			);
-			name = "react-native-image-crop-tools";
-			productName = "react-native-image-crop-tools";
-			productReference = 20E26B48272226EF001DE3D2 /* libreact-native-image-crop-tools.a */;
+			name = "react-native-image-crop-tools-custom";
+			productName = "react-native-image-crop-tools-custom";
+			productReference = 20E26B48272226EF001DE3D2 /* libreact-native-image-crop-tools-custom.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +95,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 20E26B43272226EF001DE3D2 /* Build configuration list for PBXProject "react-native-image-crop-tools" */;
+			buildConfigurationList = 20E26B43272226EF001DE3D2 /* Build configuration list for PBXProject "react-native-image-crop-tools-custom" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20E26B47272226EF001DE3D2 /* react-native-image-crop-tools */,
+				20E26B47272226EF001DE3D2 /* react-native-image-crop-tools-custom */,
 			);
 		};
 /* End PBXProject section */
@@ -265,7 +265,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20E26B43272226EF001DE3D2 /* Build configuration list for PBXProject "react-native-image-crop-tools" */ = {
+		20E26B43272226EF001DE3D2 /* Build configuration list for PBXProject "react-native-image-crop-tools-custom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20E26B4F272226EF001DE3D2 /* Debug */,
@@ -274,7 +274,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20E26B51272226EF001DE3D2 /* Build configuration list for PBXNativeTarget "react-native-image-crop-tools" */ = {
+		20E26B51272226EF001DE3D2 /* Build configuration list for PBXNativeTarget "react-native-image-crop-tools-custom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20E26B52272226EF001DE3D2 /* Debug */,
