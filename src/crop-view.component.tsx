@@ -1,6 +1,7 @@
 import React, { createRef } from 'react';
 import {
   findNodeHandle,
+  NativeModules,
   NativeSyntheticEvent,
   requireNativeComponent,
   StyleProp,
@@ -8,6 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
+const { CropViewManager } = NativeModules;
 const RCTCropView = requireNativeComponent('CropView');
 
 type Response = {
@@ -16,6 +18,13 @@ type Response = {
   height: number;
   x: number;
   y: number;
+};
+
+type CropCoordinates = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
 };
 
 type Props = {
@@ -49,6 +58,19 @@ class CropView extends React.PureComponent<Props> {
       UIManager.getViewManagerConfig('CropView').Commands.rotateImage,
       [clockwise]
     );
+  };
+
+  public getCropCoordinates = (callback: (coordinates: CropCoordinates) => void) => {
+    const reactTag = findNodeHandle(this.viewRef.current!);
+    
+    // Call the native module directly to get crop coordinates
+    CropViewManager.getCropCoordinates(reactTag, (error: string, coordinates: CropCoordinates) => {
+      if (error) {
+        console.error("Error retrieving crop coordinates:", error);
+        return;
+      }
+      callback(coordinates);
+    });
   };
 
   public render() {

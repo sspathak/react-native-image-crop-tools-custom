@@ -56,6 +56,31 @@ RCT_EXPORT_METHOD(saveImage:(nonnull NSNumber*) reactTag
     }];
 }
 
+RCT_EXPORT_METHOD(getCropCoordinates:(nonnull NSNumber*) reactTag
+                  callback:(RCTResponseSenderBlock)callback) {
+    [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, NSDictionary<NSNumber *,UIView *> *viewRegistry) {
+        RCTCropView *cropView = (RCTCropView *)viewRegistry[reactTag];
+        
+        if (!cropView) {
+            callback(@[@"Crop view not found", [NSNull null]]);
+            return;
+        }
+        
+        CGRect cropFrame = [cropView getCropFrame];
+        
+        // Create a dictionary to hold the crop coordinates
+        NSDictionary *coordinates = @{
+            @"x": @(cropFrame.origin.x),
+            @"y": @(cropFrame.origin.y),
+            @"width": @(cropFrame.size.width),
+            @"height": @(cropFrame.size.height)
+        };
+        
+        // Call the callback with nil for no error and the coordinates as the result
+        callback(@[[NSNull null], coordinates]);
+    }];
+}
+
 RCT_EXPORT_METHOD(rotateImage:(nonnull NSNumber*) reactTag clockwise:(BOOL) clockwise) {
     [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, NSDictionary<NSNumber *,UIView *> *viewRegistry) {
         RCTCropView *cropView = (RCTCropView *)viewRegistry[reactTag];
